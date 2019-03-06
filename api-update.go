@@ -1,10 +1,10 @@
 package main
 
 import (
-	model "./domain"
 	"bytes"
 	"encoding/json"
 	"fmt"
+	"github.com/mrzkhd/tlgrm-bot/domain"
 	"io/ioutil"
 	"net/http"
 )
@@ -16,7 +16,6 @@ const (
 	CHAT_ID                = "chat_id"
 	USER_ID                = "user_id"
 )
-
 
 //func Handler(w http.ResponseWrgit iter, r *http.Request) {
 //
@@ -38,7 +37,7 @@ func Handler(w http.ResponseWriter, r *http.Request) {
 		return
 	}
 
-	if (update.Message.From.IsBot == true) {
+	if update.Message.From.IsBot == true {
 		fmt.Println("Bot detected!")
 		kickUser()
 	}
