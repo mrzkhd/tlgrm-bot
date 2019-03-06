@@ -1,0 +1,15 @@
+{
+  "version": 2,
+  "name": "go",
+  "public": true,
+  "builds": [
+    { "src": "api-update.go", "use": "@now/go" },
+    { "src": "domain/models.go", "use": "@now/static" }
+  ],
+  "routes": [
+    {
+      "src": "/update",
+      "dest": "api-update.go"
+    }
+  ]
+}
