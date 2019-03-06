@@ -17,13 +17,6 @@ const (
 	USER_ID                = "user_id"
 )
 
-//func Handler(w http.ResponseWrgit iter, r *http.Request) {
-//
-//	3
-//
-//
-//}
-
 var update model.Update
 
 func Handler(w http.ResponseWriter, r *http.Request) {
@@ -37,13 +30,13 @@ func Handler(w http.ResponseWriter, r *http.Request) {
 		return
 	}
 
-	if update.Message.From.IsBot == true {
+	/*if update.Message.From.IsBot == true {
 		fmt.Println("Bot detected!")
 		kickUser()
-	}
+	}*/
 
-	fmt.Println(update.UpdateID)
-	fmt.Println(update.Message.MessageID)
+	fmt.Fprintf(w, string(update.UpdateID))
+	//fmt.Println(update.Message.MessageID)
 
 }
 

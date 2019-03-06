@@ -16,10 +16,6 @@
     {
       "src": "/home",
       "dest": "api-home.go"
-    },
-    {
-      "src": "/info",
-      "dest": "api-update.go"
     }
   ]
 }
