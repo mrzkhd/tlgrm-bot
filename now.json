@@ -3,12 +3,22 @@
   "name": "go",
   "public": true,
   "builds": [
-    { "src": "api-update.go", "use": "@now/go" },
-    { "src": "domain/models.go", "use": "@now/static" }
+    {
+      "src": "*.go",
+      "use": "@now/go"
+    }
   ],
   "routes": [
     {
       "src": "/update",
+      "dest": "api-update.go"
+    },
+    {
+      "src": "/home",
+      "dest": "api-home.go"
+    },
+    {
+      "src": "/info",
       "dest": "api-update.go"
     }
   ]
